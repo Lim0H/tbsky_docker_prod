@@ -1,0 +1,4 @@
+.env
+crypto_key.txt
+jwt_secret_key.txt
+.mypy_cache/*
