@@ -1,0 +1,6 @@
+[submodule "tbsky-booking"]
+	path = tbsky-booking
+	url = https://github.com/Lim0H/tbsky_booking.git
+[submodule "tbsky-session"]
+	path = tbsky-session
+	url = https://github.com/Lim0H/tbsky_session.git
