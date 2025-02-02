@@ -58,8 +58,9 @@ run_setup_commands() {
 
 # Main script execution
 echo "Starting setup process..."
-git clone https://github.com/Lim0H/tbsky_session tbsky-session
-git clone https://github.com/Lim0H/tbsky_booking tbsky-booking
+git clone https://github.com/Lim0H/tbsky_session.git tbsky-session
+git clone https://github.com/Lim0H/tbsky_booking.git tbsky-booking
+git clone https://github.com/sashasupron/ticket-search.git tbsky-frontend
 generate_keys
 initialize_docker
 run_setup_commands

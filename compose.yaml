@@ -131,7 +131,7 @@ services:
     volumes:
       - redis_data:/data
 
-  haproxy:
+  load-balancer:
     restart: always
     image: haproxy:2.8
     ports:
@@ -143,6 +143,24 @@ services:
       - ./haproxy:/usr/local/etc/haproxy
     networks:
       - backend
+  
+  tbsky-frontend:
+    build:
+      context: ./tbsky-frontend
+      target: dev
+    ports:
+      - "80:3000"
+    networks:
+      - backend
+    depends_on:
+      - load-balancer
+
+    deploy:
+      mode: replicated
+      endpoint_mode: vip
+      replicas: 1
+      restart_policy:
+        condition: on-failure
 
 volumes:
     tbsky-session-db-data:

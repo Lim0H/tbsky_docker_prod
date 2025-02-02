@@ -4,3 +4,6 @@
 [submodule "tbsky-session"]
 	path = tbsky-session
 	url = https://github.com/Lim0H/tbsky_session.git
+[submodule "tbsky-frontend"]
+	path = tbsky-frontend
+	url = https://github.com/sashasupron/ticket-search.git
