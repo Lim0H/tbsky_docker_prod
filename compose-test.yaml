@@ -18,7 +18,7 @@ services:
     volumes:
       - ./tbsky-session:/app
     env_file:
-      - path: .env
+      - path: .env.testing
         required: true
     secrets:
       - jwt_secret_key
@@ -44,7 +44,7 @@ services:
       - ./tbsky-booking:/app
 
     env_file:
-      - path: .env
+      - path: .env.testing
         required: true
     secrets:
       - crypto_key
